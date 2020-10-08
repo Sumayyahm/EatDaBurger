@@ -6,8 +6,6 @@ A burger :hamburger: logger app created with MYSQL, Node, Express, Handlebars an
 ## URL of the deployed app in Heroku
 https://stormy-dawn-28068.herokuapp.com/
 
-## Link to my portfolio  
-
 ## Code 
 For this assignment :
 In the EatDaBurger Directory, created
