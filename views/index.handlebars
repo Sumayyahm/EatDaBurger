@@ -1,34 +1,45 @@
-<img id="img1" src="/public/assets/img/burger1.jpg" alt="burger image">
-<hr><hr>
+<div>
 <h1>Eat-Da-Burger</h1>
-<hr>
-
-<ul id="not-devoured">
-    {{#each burgers}}
-      {{#unless devoured}}
-      <li>
-          {{burger_name}}
-          <button class="devour-burger" data-id="{{this.id}}">Devour it!</button>
-      </li>
-      {{/unless}}
-    {{/each}}
-</ul>
-
-<ul id="devoured">
-    {{#each burgers}}
-      {{#if devoured}}
-      <li>
-          {{burger_name}}
-      </li>
-      {{/if}}
-    {{/each}}
-</ul>
+<img class="burger-img" src="/assets/img/Yummy-Burger-PNG.png" alt="burger image">
+<br>
 
 <h2>Add a Burger you like</h2>
-<form class = "add-burger">
-    <div>
-        <input type="text" id="burger" name="name">
+<form class = "create-form">
+    <div class= "form-group">
+        <input type="text" id="burger_name" name="burger_name" placeholder="Input burger name">
     </div>
-    <button type="submit">Add Burger</button>
+    <br>
+    <button type="submit" class="burger-btn">Add Burger</button>
 </form>
+<br><br>
+
+<section id="not-devoured">
+  <p style="color:yellow; font-size:larger">I am craving</p>
+    {{#each burgers}}
+      {{#unless devoured}}
+      <p>
+          {{this.burger_name}}
+          
+          <button class="devour-burger" data-id="{{this.id}}">Devour it!</button>
+          <br><br>
+      </p>
+      {{/unless}}
+    {{/each}}
+</section>
+
+<section id="devoured">
+  <p style="color:yellow; font-size:larger">Yummy in my Tummy!</p>
+    {{#each burgers}}
+      {{#if devoured}}
+      <p>
+       {{this.burger_name}}
+        <br><br>
+      </p>
+      {{/if}}
+    {{/each}}
+</section>
+<img class="burger-img" src="/assets/img/Hamburger-PNG-Picture.png" alt="burger image">
+</div>
+
+
 
