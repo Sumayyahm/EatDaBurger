@@ -11,27 +11,26 @@ $(function () {
             data: newDevouredState
         }).then(function() {
             console.log("changed devoured to true");
-            $(".devour-burger").hide();
             location.reload();
         });
     });
 
 
 
-$(".add-burger").on("submit", function(event) {
+$(".burger-btn").on("click", function(event) {
     event.preventDefault();
-
-    var newBurger = {
-        burger_name = $("#burger").val().trim()
-    };
-
+  
     $.ajax("/api/burgers", {
         type: "POST",
-        data: newBurger
-    }).then(function() {
+        data: {
+            burger_name: $("#burger_name").val().trim()
+        }
+    }).then(
+        function() {
         console.log("created new burger");
         location.reload();
     });
 });
+
 
 });
