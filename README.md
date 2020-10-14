@@ -15,6 +15,7 @@ In the EatDaBurger Directory, created
 * views folder (with the index.handlebars and main.handlebars containing the html layout)
 * assets folder (with the css file, the images and the script file containing the on-click event handlers for the buttons)
 * server.js file to start the server 
+
 The following structure was replicated
 ```
 .
@@ -56,9 +57,6 @@ The following structure was replicated
 * mysql
 * express
 * express-handlebars
-
-## Installation
-Clone repository from Github and install the dependencies to run the app
 
 ## License
 MIT
